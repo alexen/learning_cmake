@@ -20,10 +20,20 @@ add_library(
      STATIC
           $<TARGET_OBJECTS:message-obj>
 )
+set_target_properties(
+     message-static
+     PROPERTIES
+          OUTPUT_NAME "message"
+)
 add_library(
      message-shared
      SHARED
           $<TARGET_OBJECTS:message-obj>
+)
+set_target_properties(
+     message-shared
+     PROPERTIES
+          OUTPUT_NAME "message"
 )
 
 add_executable(
